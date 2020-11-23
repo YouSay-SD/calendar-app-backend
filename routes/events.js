@@ -9,17 +9,20 @@ const { getEvents, createEvent, updateEvent, deleteEvent } = require('../control
 
 const router = Router();
 
+// All requests get this validation
+router.use(validateJwt);
+
 // Get Events
-router.get('/', validateJwt, getEvents);
+router.get('/', getEvents);
 
 // Create New Event
-router.post('/', validateJwt, createEvent);
+router.post('/', createEvent);
 
 // Update Event
-router.put('/:id', validateJwt, updateEvent);
+router.put('/:id', updateEvent);
 
 // Delete Event
-router.delete('/:id', validateJwt, deleteEvent);
+router.delete('/:id', deleteEvent);
 
 
 module.exports = router;

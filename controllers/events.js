@@ -1,8 +1,4 @@
 const { response } = require('express');
-// const bcrypt = require('bcryptjs');
-// const User = require('../models/User');
-// const { use } = require('../routes/auth');
-// const { generateJwt } = require('../helpers/jwt'); 
 
 // Get Events
 const getEvents = (req, res = response) => {
