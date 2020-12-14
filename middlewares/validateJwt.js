@@ -6,12 +6,12 @@ const validateJwt = (req, res = response, next) => {
   // x-token Headers
   const token = req.header('x-token');
 
-  if (!token) {
-    return res.status(401).json({
-      ok: false,
-      msg: 'No hay Token en la peticion'
-    });
-  }
+  // if (!token) {
+  //   return res.status(401).json({
+  //     ok: false,
+  //     msg: 'No hay Token en la peticion'
+  //   });
+  // }
 
   try {
     const {uid, name} = jwt.verify(
